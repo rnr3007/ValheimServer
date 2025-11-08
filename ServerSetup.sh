@@ -13,7 +13,7 @@ fi
 
 # Install steamCMD
 echo "Checking for steamcmd installation..."
-hash steamcmd
+hash steamcmd &>/dev/null
 if [ $? -ne 0 ]; then
     echo "steamcmd not found, installing..."
     sudo add-apt-repository multiverse; sudo dpkg --add-architecture i386; sudo apt update
@@ -22,12 +22,9 @@ else
     echo "steamcmd found, skipping installation."
 fi
 
-echo "updating steamcmd..."
-steamcmd
-
 # Default path if not provided
 server_path=$1
-if ! $server_path; then
+if [ ! $server_path || $server_path -eq "" ]; then
     server_path=$HOME/steam/valheim
 fi
 
