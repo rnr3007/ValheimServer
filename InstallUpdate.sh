@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Default path if not provided
 server_path=$1
@@ -6,7 +6,7 @@ if [[ ! $server_path || $server_path -eq "" ]]; then
     server_path=$HOME/steam/valheim
 fi
 
-if [[ ! -d $HOME/steam ]] ; then
+if [[ ! -d $HOME/steam ]]; then
     echo "Creating steam folder in home directory"
     mkdir $HOME/steam
 fi

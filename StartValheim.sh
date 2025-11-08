@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/bash 
 
 # Default path if not provided
 server_path=$1
