@@ -23,9 +23,6 @@ export templdpath=$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$server_path/linux64:$LD_LIBRARY_PATH  
 export SteamAppID=892970
 
-nohup ./valheim_server.x86_64 -name "InginTuruNew" -port 2456 -nographics -batchmode -world "InginTuru" -password "HuluSiaBitu" -public 1 >> ./ValheimServer.log &
+./valheim_server.x86_64 -name "InginTuruNew" -port 2456 -nographics -batchmode -world "InginTuru" -password "HuluSiaBitu" -public 1
 
 export LD_LIBRARY_PATH=$templdpath
-
-echo "Entering ValheimServer Log, use CTRL-C to exit"
-tail -f ./ValheimServer.log

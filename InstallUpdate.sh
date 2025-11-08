@@ -20,4 +20,4 @@ sudo apt update && sudo apt install -y libpulse-dev libatomic1 libc6
 
 # Start server after update
 echo -e "\nStarting server..."
-./StartValheim.sh $server_path
+./StartServer.sh
