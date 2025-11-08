@@ -17,9 +17,9 @@ fi
 
 # Copy the InginTuru.fwl to valheim_world directory
 if [[ ! -e "$HOME/.config/unity3d/IronGate/Valheim/worlds_local/InginTuru.fwl" ]]; then
-    cp ./valheim_world/InginTuru.fwl $HOME/.config/unity3d/IronGate/Valheim/worlds_local/InginTuru.fwl
+    cp ./valheim_world/InginTuru.fwl $HOME/.config/unity3d/IronGate/Valheim/worlds_local/
 fi
 
 echo "Starting server PRESS CTRL-C to exit"  
-nohup $server_path/valheim_server.x86_64 -name "InginTuruNew" -port 2456 -nographics -batchmode -world "InginTuru" -password "HuluSiaBitu" -public 1 >> $server_path/ValheimServer.log &
+nohup bash $server_path/valheim_server.x86_64 -name "InginTuruNew" -port 2456 -nographics -batchmode -world "InginTuru" -password "HuluSiaBitu" -public 1 >> ./ValheimServer.log &
 export LD_LIBRARY_PATH=$templdpath
