@@ -7,7 +7,7 @@ if [[ -z "$server_path" ]]; then
 fi
 
 export templdpath=$LD_LIBRARY_PATH  
-export LD_LIBRARY_PATH=./linux64:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$server_path/linux64:$LD_LIBRARY_PATH  
 export SteamAppID=892970
 
 # Copy the InginTuru.db to valheim_world directory
