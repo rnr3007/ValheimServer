@@ -24,7 +24,7 @@ fi
 
 # Default path if not provided
 server_path=$1
-if [[ ! $server_path || $server_path -eq "" ]]; then
+if [[ -z "$server_path" ]]; then
     server_path=$HOME/steam/valheim
 fi
 
